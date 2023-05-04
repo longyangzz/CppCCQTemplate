@@ -15,7 +15,9 @@ conan_cmake_run(REQUIRES
     BASIC_SETUP CMAKE_TARGETS
     GENERATORS cmake_find_package cmake_paths
     BUILD missing
-    OPTIONS qt:shared=True)
+    OPTIONS qt:shared=True
+    IMPORTS bin,*.dll->./bin
+    )
 include(${CMAKE_BINARY_DIR}/conan_paths.cmake)
 
 add_library(coverage_config INTERFACE)
