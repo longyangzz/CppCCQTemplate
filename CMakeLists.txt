@@ -16,7 +16,7 @@ conan_cmake_run(REQUIRES
     GENERATORS cmake_find_package cmake_paths
     BUILD missing
     OPTIONS qt:shared=True
-    IMPORTS bin,*.dll->./bin
+    IMPORTS bin,*.dll->./src/App/Debug
     )
 include(${CMAKE_BINARY_DIR}/conan_paths.cmake)
 
